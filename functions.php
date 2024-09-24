@@ -4,7 +4,7 @@
  * Theme Setup
  */
 
-function projectname_theme_setup()
+function mythemename_theme_setup()
 {
 
   // ## ADD THEME SUPPORTS
@@ -18,9 +18,9 @@ function projectname_theme_setup()
 
   register_nav_menus(
     array(
-      'header-menu-primary' => __('Primary', 'projectname'),
-      'header-menu-secondary' => __('Secondary', 'projectname'),
-      'header-menu-mobile' => __('Mobile', 'projectname'),
+      'header-menu-primary' => __('Primary', 'mythemename'),
+      'header-menu-secondary' => __('Secondary', 'mythemename'),
+      'header-menu-mobile' => __('Mobile', 'mythemename'),
     )
   );
   
@@ -51,7 +51,7 @@ function projectname_theme_setup()
   
 
 }
-projectname_theme_setup();
+mythemename_theme_setup();
 
 
 // Allow SVG upload
@@ -65,7 +65,7 @@ add_filter('upload_mimes', 'allow_svg_upload');
 
 
 // Declare woocommerce support
-function projectname_add_woocommerce_support() {
+function mythemename_add_woocommerce_support() {
   add_theme_support( 'woocommerce', array(
       // 'thumbnail_image_width' => 150,
       // 'single_image_width'    => 300,
@@ -81,7 +81,7 @@ function projectname_add_woocommerce_support() {
   ) );
 }
 
-add_action( 'after_setup_theme', 'projectname_add_woocommerce_support' );
+add_action( 'after_setup_theme', 'mythemename_add_woocommerce_support' );
 
 
 
@@ -90,7 +90,7 @@ add_action( 'after_setup_theme', 'projectname_add_woocommerce_support' );
  * Register and Enqueue Styles.
  */
 
-function projectname_register_styles()
+function mythemename_register_styles()
 {
 
 
@@ -98,7 +98,7 @@ function projectname_register_styles()
   wp_enqueue_style('stylesheet');
 }
 
-add_action('wp_enqueue_scripts', 'projectname_register_styles', 9999999999);
+add_action('wp_enqueue_scripts', 'mythemename_register_styles', 9999999999);
 
 
 
@@ -106,7 +106,7 @@ add_action('wp_enqueue_scripts', 'projectname_register_styles', 9999999999);
  * Register and Enqueue Scripts.
  */
 
-function projectname_register_scripts()
+function mythemename_register_scripts()
 {
 
 
@@ -114,7 +114,7 @@ function projectname_register_scripts()
   wp_enqueue_script('main-js');
 }
 
-add_action('wp_enqueue_scripts', 'projectname_register_scripts', 9999999999);
+add_action('wp_enqueue_scripts', 'mythemename_register_scripts', 9999999999);
 
 
 
@@ -124,10 +124,10 @@ add_action('wp_enqueue_scripts', 'projectname_register_scripts', 9999999999);
 
 // ******************** Clean up WordPress Header START ********************** //
 
-function projectname_remove_version(){
+function mythemename_remove_version(){
   return '';
 }
-add_filter('the_generator', 'projectname_remove_version');
+add_filter('the_generator', 'mythemename_remove_version');
 
 remove_action('wp_head', 'rest_output_link_wp_head', 10);
 remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
@@ -223,7 +223,7 @@ if (function_exists('acf_add_options_page')) {
 // ******************** Elementor related functions START ********************** //
 
 // Custom Elementor Widgets.
-require_once get_template_directory() . '/inc/projectname-widgets/projectname-widgets.php';
+require_once get_template_directory() . '/inc/mytheme-widgets/mytheme-widgets.php';
 
 // ******************** Elementor related functions END ********************** //
 

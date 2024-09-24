@@ -5,20 +5,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Run Class
-if (class_exists('ProjectName_Elementor_Widget')) {
-	ProjectName_Elementor_Widget::instance();
+if (class_exists('MyThemeName_Elementor_Widget')) {
+	MyThemeName_Elementor_Widget::instance();
 }
 
 
 /**
- * ProjectName_Elementor_Widget class.
+ * MyThemeName_Elementor_Widget class.
  *
  * The main class that initiates and runs the addon.
  *
  * @since 1.0.0
  */
 
-final class ProjectName_Elementor_Widget {
+final class MyThemeName_Elementor_Widget {
 
 	/**
 	 * Addon Version
@@ -144,7 +144,7 @@ final class ProjectName_Elementor_Widget {
 
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'elementor-test-addon' ),
-			'<strong>' . esc_html__( 'ProjectName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'MyThemeName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'elementor-test-addon' ) . '</strong>'
 		);
 
@@ -170,7 +170,7 @@ final class ProjectName_Elementor_Widget {
 
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'elementor-test-addon' ),
-			'<strong>' . esc_html__( 'ProjectName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'MyThemeName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'elementor-test-addon' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 
@@ -199,7 +199,7 @@ final class ProjectName_Elementor_Widget {
 
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'elementor-test-addon' ),
-			'<strong>' . esc_html__( 'ProjectName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
+			'<strong>' . esc_html__( 'MyThemeName Elementor Widget', 'elementor-test-addon' ) . '</strong>',
 			'<strong>' . esc_html__( 'PHP', 'elementor-test-addon' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 
@@ -243,16 +243,16 @@ final class ProjectName_Elementor_Widget {
 	function register_widgets( $widgets_manager ) {
 
 		// require_once( __DIR__ . '/widgets/theme-button.php');
-		// $widgets_manager->register( new \ProjectName_Elementor\Theme_Button() );
+		// $widgets_manager->register( new \MyThemeName_Elementor\Theme_Button() );
 
 		// require_once( __DIR__ . '/widgets/marquee.php');
-		// $widgets_manager->register( new \ProjectName_Elementor\Text_Marquee() );
+		// $widgets_manager->register( new \MyThemeName_Elementor\Text_Marquee() );
 
 		// require_once( __DIR__ . '/widgets/bigslider.php');
-		// $widgets_manager->register( new \ProjectName_Elementor\Bigslider() );
+		// $widgets_manager->register( new \MyThemeName_Elementor\Bigslider() );
 
 		// require_once( __DIR__ . '/widgets/cars-carousel.php');
-		// $widgets_manager->register( new \ProjectName_Elementor\Cars_Carousel() );
+		// $widgets_manager->register( new \MyThemeName_Elementor\Cars_Carousel() );
 
 	}
 
@@ -266,9 +266,9 @@ final class ProjectName_Elementor_Widget {
 
 		$categories = [];
 
-		$categories['projectname'] =
+		$categories['mythemename'] =
 			[
-				'title' => __( 'projectname', 'projectname-elementor-addon' ),
+				'title' => __( 'mythemename', 'mythemename-elementor-addon' ),
 				'icon' => 'fa fa-plug',
 			];
 

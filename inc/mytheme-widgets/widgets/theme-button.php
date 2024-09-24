@@ -1,5 +1,5 @@
 <?php
-namespace ProjectName_Elementor;
+namespace MyThemeName_Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -13,7 +13,7 @@ class Theme_Button extends \Elementor\Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'Button', 'projectname' );
+		return esc_html__( 'Button', 'mythemename' );
 	}
 
 	public function get_icon() {
@@ -21,7 +21,7 @@ class Theme_Button extends \Elementor\Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'projectname' ];
+		return [ 'mythemename' ];
 	}
 
 
@@ -29,7 +29,7 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'section_button',
 			[
-				'label' => esc_html__( 'Theme Button', 'projectname' ),
+				'label' => esc_html__( 'Theme Button', 'mythemename' ),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -38,14 +38,14 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->add_control(
 			'button_style',
 			[
-				'label' => esc_html__( 'Theme', 'projectname' ),
+				'label' => esc_html__( 'Theme', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-                    '' => esc_html__( 'Default', 'projectname' ),
-                    'btn-primary' => esc_html__( 'Primary', 'projectname' ),
-                    'btn-white' => esc_html__( 'White (black text)', 'projectname' ),
-                    'btn-matte-white' => esc_html__( 'Matte White', 'projectname' ),
+                    '' => esc_html__( 'Default', 'mythemename' ),
+                    'btn-primary' => esc_html__( 'Primary', 'mythemename' ),
+                    'btn-white' => esc_html__( 'White (black text)', 'mythemename' ),
+                    'btn-matte-white' => esc_html__( 'Matte White', 'mythemename' ),
                 ],
 			]
         );
@@ -54,10 +54,10 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->add_responsive_control(
 			'full_width',
 			[
-				'label' => esc_html__( 'Full Width', 'projectname' ),
+				'label' => esc_html__( 'Full Width', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'projectname' ),
-				'label_off' => esc_html__( 'False', 'projectname' ),
+				'label_on' => esc_html__( 'True', 'mythemename' ),
+				'label_off' => esc_html__( 'False', 'mythemename' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -66,10 +66,10 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->add_control(
 			'uppercase',
 			[
-				'label' => esc_html__( 'Uppercase', 'projectname' ),
+				'label' => esc_html__( 'Uppercase', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'projectname' ),
-				'label_off' => esc_html__( 'False', 'projectname' ),
+				'label_on' => esc_html__( 'True', 'mythemename' ),
+				'label_off' => esc_html__( 'False', 'mythemename' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -78,10 +78,10 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->add_control(
 			'nopadding',
 			[
-				'label' => esc_html__( 'Remove paddings', 'projectname' ),
+				'label' => esc_html__( 'Remove paddings', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'projectname' ),
-				'label_off' => esc_html__( 'False', 'projectname' ),
+				'label_on' => esc_html__( 'True', 'mythemename' ),
+				'label_off' => esc_html__( 'False', 'mythemename' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -90,10 +90,10 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->add_control(
 			'responsive',
 			[
-				'label' => esc_html__( 'Responsive', 'projectname' ),
+				'label' => esc_html__( 'Responsive', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'True', 'projectname' ),
-				'label_off' => esc_html__( 'False', 'projectname' ),
+				'label_on' => esc_html__( 'True', 'mythemename' ),
+				'label_off' => esc_html__( 'False', 'mythemename' ),
 				'return_value' => 'yes',
 				'default' => '',
 			]
@@ -103,24 +103,24 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->add_control(
 			'text',
 			[
-				'label' => esc_html__( 'Text', 'projectname' ),
+				'label' => esc_html__( 'Text', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => esc_html__( 'Click here', 'projectname' ),
+				'default' => esc_html__( 'Click here', 'mythemename' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => esc_html__( 'Link', 'projectname' ),
+				'label' => esc_html__( 'Link', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => esc_html__( 'https://', 'projectname' ),
+				'placeholder' => esc_html__( 'https://', 'mythemename' ),
 				
 			]
 		);
@@ -128,20 +128,20 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => esc_html__( 'Alignment', 'projectname' ),
+				'label' => esc_html__( 'Alignment', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
                 'devices' => [ 'desktop', 'tablet', 'mobile' ],
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'projectname' ),
+						'title' => esc_html__( 'Left', 'mythemename' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'projectname' ),
+						'title' => esc_html__( 'Center', 'mythemename' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'projectname' ),
+						'title' => esc_html__( 'Right', 'mythemename' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -153,15 +153,15 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->add_control(
 			'button_size',
 			[
-				'label' => esc_html__( 'Size', 'projectname' ),
+				'label' => esc_html__( 'Size', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'btn-xsmall' => esc_html__( 'X Small', 'projectname' ),
-                    'btn-small' => esc_html__( 'Small', 'projectname' ),
-                    '' => esc_html__( 'Medium', 'projectname' ),
-                    'btn-large' => esc_html__( 'Large', 'projectname' ),
-                    'btn-xlarge' => esc_html__( 'Extra Large', 'projectname' ),
+					'btn-xsmall' => esc_html__( 'X Small', 'mythemename' ),
+                    'btn-small' => esc_html__( 'Small', 'mythemename' ),
+                    '' => esc_html__( 'Medium', 'mythemename' ),
+                    'btn-large' => esc_html__( 'Large', 'mythemename' ),
+                    'btn-xlarge' => esc_html__( 'Extra Large', 'mythemename' ),
                 ],
 			]
         );
@@ -177,14 +177,14 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'icon_left_tab',
 			[
-				'label' => esc_html__( 'Left Icon', 'projectname' ),
+				'label' => esc_html__( 'Left Icon', 'mythemename' ),
 			]
 		);
 
 		$this->add_control(
 			'left_icon',
 			[
-				'label' => esc_html__( 'Choose Icon', 'projectname' ),
+				'label' => esc_html__( 'Choose Icon', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => '',
@@ -197,14 +197,14 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'icon_right_tab',
 			[
-				'label' => esc_html__( 'Right Icon', 'projectname' ),
+				'label' => esc_html__( 'Right Icon', 'mythemename' ),
 			]
 		);
 
 		$this->add_control(
 			'right_icon',
 			[
-				'label' => esc_html__( 'Choose Icon', 'projectname' ),
+				'label' => esc_html__( 'Choose Icon', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => '',
@@ -224,7 +224,7 @@ class Theme_Button extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'style_section',
 			[
-				'label' => esc_html__( 'Custom Style', 'projectname' ),
+				'label' => esc_html__( 'Custom Style', 'mythemename' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -232,12 +232,12 @@ class Theme_Button extends \Elementor\Widget_Base {
 		$this->add_control(
 			'class_name',
 			[
-				'label' => esc_html__( 'Custom Class', 'projectname' ),
+				'label' => esc_html__( 'Custom Class', 'mythemename' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'label_block' => true,
 				'separator' => 'before',
-				'default' => esc_html__( '', 'projectname' ),
-				'placeholder' => esc_html__( 'class-name', 'projectname' ),
+				'default' => esc_html__( '', 'mythemename' ),
+				'placeholder' => esc_html__( 'class-name', 'mythemename' ),
 			]
 		);
 
