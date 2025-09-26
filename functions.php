@@ -223,29 +223,6 @@ if (function_exists('acf_add_options_page')) {
 // ******************** Elementor related functions START ********************** //
 
 // Custom Elementor Widgets.
-require_once get_template_directory() . '/inc/mytheme-widgets/mytheme-widgets.php';
+require_once get_template_directory() . '/mytheme-widgets/mytheme-widgets.php';
 
 // ******************** Elementor related functions END ********************** //
-
-
-
-
-
-
-
-// // Disable SRCSET for images
-
-// function remove_max_srcset_image_width( $max_width ) {
-//   return false;
-//  }
-//  add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
-//  function wdo_disable_srcset( $sources ) {
-//   return false;
-//  }
-//  add_filter( 'wp_calculate_image_srcset', 'wdo_disable_srcset' );
-
-
-
-// MENU WALKERS
-// require_once get_template_directory() . '/inc/walker-primary.php';
-
